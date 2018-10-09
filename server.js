@@ -22,13 +22,13 @@ app.use((req , res, next) => {
   next();
 });
 
-app.use((req , res , next) => {
-  res.render('maintenance.hbs' , {
-    pageTitle: 'ROOT PAGE',
-    welcomeMessage: 'Welcome to this broken site. enjoy',
-    headerText: 'this is the header text'
-  });
-});
+// app.use((req , res , next) => {
+//   res.render('maintenance.hbs' , {
+//     pageTitle: 'ROOT PAGE',
+//     welcomeMessage: 'Welcome to this broken site. enjoy',
+//     headerText: 'this is the header text'
+//   });
+// });
 
 app.use(express.static(__dirname + '/public'));
 
