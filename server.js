@@ -43,25 +43,32 @@ hbs.registerHelper('screamIt' , (text) => {
 
 app.get('/' , (req , res) => {
   res.render('root.hbs' , {
-    pageTitle: 'ROOT PAGE',
-    welcomeMessage: 'Welcome to this broken site. enjoy',
-    headerText: 'this is the header text'
+    pageTitle: 'Home Page',
+    welcomeMessage: 'Welcome to Gal Bashan\'s offical fan website!',
+    headerText: 'the only website on the internet dedicated only to gal :)'
   });
 });
 
 app.get('/about' , (req , res) => {
   res.render('about.hbs' , {
-    pageTitle: 'About Page2',
-    headerText: 'this is the header text'
+    pageTitle: 'About Gal Bashan',
+    headerText: 'the hottest biologist in haifa'
   });
-})
+});
+
+app.get('/projects' , (req , res) => {
+  res.render('projects.hbs' , {
+    pageTitle: 'Portfolio',
+    headerText: 'Some work of the creator'
+  });
+});
 
 app.get('/bad' , (req , res) => {
   res.send({
     errorMessage: 'Unable to fulfill request.',
     errorCode: 9000
   });
-})
+});
 
 app.listen(port , () => {
   console.log(`Server is up on port ${port}`);
