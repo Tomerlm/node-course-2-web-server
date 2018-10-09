@@ -43,9 +43,9 @@ hbs.registerHelper('screamIt' , (text) => {
 
 app.get('/' , (req , res) => {
   res.render('root.hbs' , {
-    pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to Gal Bashan\'s offical fan website!',
-    headerText: 'the only website on the internet dedicated only to gal :)'
+    pageTitle: 'Gal Bashan\'s Offical Fan Site',
+    welcomeMessage: 'Have fun exploring...',
+    headerText: 'the only website on the internet dedicated solely to gal!'
   });
 });
 
